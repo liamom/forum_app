@@ -1,0 +1,22 @@
+#= depend_on_asset login/welcome.html
+#= depend_on_asset login/login.html
+
+loginController = ($scope) ->
+  $scope.firstName= "John"
+  $scope.lastName= "Doe"
+
+routeProvider = ($routeProvider) ->
+  $routeProvider
+    .when( '/', {
+      templateUrl: '<%= asset_path("login/welcome.html") %>'
+      controller  : 'login'
+    })
+    .when( '/login', {
+      templateUrl: '<%= asset_path("login/login.html") %>'
+      controller  : 'login'
+    })
+
+app = angular
+  .module('main', ['ngRoute'])
+  .controller 'login', loginController
+  .config routeProvider
