@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  formID: MyString
+  userID: MyString
+  text: MyString
+
+two:
+  formID: MyString
+  userID: MyString
+  text: MyString

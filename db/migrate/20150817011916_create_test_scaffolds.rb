@@ -3,7 +3,7 @@ class CreateTestScaffolds < ActiveRecord::Migration
     create_table :test_scaffolds do |t|
       t.string :name
       t.string :email
-      t.string :passoword
+      t.string :password
 
       t.timestamps
     end

@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+puts "hi"
+u = User.create(:username => "Liam", :email => "liam@test.com", :password => "12345")
+uf = User.find_by "username" , "Liam"
+u.discussions.new({:title => "title", :user_id => u.id})
+
+u.save
+#u.posts.build({:text => "Hi", :user_id => u.id, :discussion_id => d.id})
